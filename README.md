@@ -23,3 +23,5 @@ Rest assured, the compression algorithm is still valid. For example, when compre
 **Unit tests** -- `npm test`
 
 **Functionality** -- `diff data.txt decoded.txt` should output nothing
+
+**Clean-up** -- `./clean.sh`
