@@ -12,12 +12,16 @@ Rest assured, the compression algorithm is still valid. For example, when compre
 
 ## Usage
 
-Install dependencies:
+#Install dependencies:
+
 `npm install`
 
-To create encoded and decoded files:
+#To create encoded and decoded files:
+
 `node compression.js <test file>`
 
-Testing:
-Unit tests -- `npm test`
-Functionality -- `diff data.txt decoded.txt` should output nothing
+#Testing:
+
+**Unit tests** -- `npm test`
+
+**Functionality** -- `diff data.txt decoded.txt` should output nothing
