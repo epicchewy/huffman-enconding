@@ -1,12 +1,23 @@
 'use strict';
 
-const assert = require('assert');
 const _ = require('lodash');
+const assert = require('assert');
 const fs = require('fs');
 
 const trie = require('../services/trie');
 
 const ASCII_RANGE = 256;
+
+/**
+ * Main class that handles encoding/decoding
+ * Each instance of a Huffman class will hold its file,
+ * associated prefix-tree, frequency table, encodings table,
+ * and the encoded binary string.
+ * 
+ * Performs all necessary encodings and writes to files.
+ * 
+ * @param: (File) file -- input file to encode
+ */
 
 class Huffman {
   constructor(file) {
@@ -40,6 +51,7 @@ class Huffman {
     /**
      * The two commented chunks below are different types of file encodings -- utf-8 & hex.
      * Both are derived from the initial binary string that is returned from the encodings table.
+     * As stated in the README.md JS has poor support for binary strings despite their Buffer class.
      */
 
     // const digits = _.map(charArray, char => {

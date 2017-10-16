@@ -3,6 +3,12 @@
 const _ = require('lodash');
 const assert = require('assert');
 
+/**
+ *  Node class represents a node in the huffman prefix-tree.
+ *  Holds character, frequency of that character,
+ *  and pointers to left/right nodes.
+ */
+
 class Node {
   constructor(char, frequency, left, right) {
     this.char = char;

@@ -1,10 +1,19 @@
-const heap = require('min-heap');
+'use strict';
+
 const assert = require('assert');
+const heap = require('min-heap');
+
 const Node = require('../classes/Node');
 
 const minHeap = new heap((a, b) => {
   return a.frequency - b.frequency;
 });
+
+/**
+ * Function build() -- builds the prefix tree
+ * Uses a min-heap to build a trie from bottom up
+ * adding internal nodes based off its childrens' frequencies
+ */
 
 function build(frequencies) {
   for (let i = 0; i < 256; i++) {
