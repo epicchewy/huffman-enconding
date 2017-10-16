@@ -1,7 +1,5 @@
 'use strict';
 
-const _ = require('lodash');
-
 const { huffman } = require('./huffman');
 const compressionTest = new huffman(process.argv[2]);
 
