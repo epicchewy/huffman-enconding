@@ -1,8 +1,8 @@
-### Plaid Coding Challenge Solution
+## Plaid Coding Challenge Solution
 
 Task Summary -- Optimize a data format to efficiently transport data between systems.
 
-## Implementation Overview
+### Implementation Overview
 
 This challenge asks for a solution to encode / decode ASCII art while preserving file data (and reducing file size upon encoding). Therefore, I believe a good way to encode/decode the file is to use a lossless compression technique like Huffman Encoding, a technique that takes advantage of a weight of each unique character to build a variable-length encoding table that can efficiently encode the input. Since data compression is used very often when transporting data between systems, I decided to build a module wrapping the Huffman encoding process, only exposing the class on the interface to make it easy to use and understand.
 
@@ -10,7 +10,7 @@ Admittedly, implementing the solution in JavaScript might have been the best dec
 
 Rest assured, the compression algorithm is still valid. For example, when compressing data.txt, a file with 5000+ bytes, the output file contains a binary string of ~10000 bits. When we convert that to bytes, we see that the file actually dramatically reduced in size from ~5000 -> ~1300 bytes.
 
-## Usage
+### Usage
 
 Install dependencies:
 `npm install`
